@@ -1,0 +1,17 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+/artifacts/
+/data/
+/runs/
+/checkpoints/
+/wandb/
+*.ckpt
+*.pt
+*.safetensors
+*.h5
+*.zarr
+*.mp4

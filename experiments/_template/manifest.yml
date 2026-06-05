@@ -1,0 +1,14 @@
+id: E###
+status: planned
+question: Q###
+hypotheses:
+  - H###
+claims:
+  - C###
+decision: null
+primary_metric: null
+dataset: null
+artifact_root: artifacts/E###
+runs: []
+result: null
+next: null
