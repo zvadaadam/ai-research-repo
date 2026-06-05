@@ -1,6 +1,8 @@
 # AI Research Repo
 
-This is a clean research-repo scaffold for long-running AI experiments.
+This is a clean research-repo scaffold for long-running AI experiments. It is
+meant to be used as a **GitHub template repository**: start new research repos
+from it, then do the actual research in the child repo.
 
 The core idea is an evidence graph:
 
@@ -47,6 +49,15 @@ gh repo create OWNER/NEW_RESEARCH_REPO \
 
 Use `--public` instead of `--private` when the new research should be open.
 You can also click **Use this template** on GitHub.
+
+Example:
+
+```bash
+gh repo create zvadaadam/imaginator-v2 \
+  --template zvadaadam/ai-research-repo \
+  --private \
+  --clone
+```
 
 After cloning the new repo:
 

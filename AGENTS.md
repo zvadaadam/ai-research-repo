@@ -3,6 +3,10 @@
 This repo is a research workspace. Treat it like a lab notebook with runnable
 code, not like a normal app repo.
 
+This repository is also intended to be used as a GitHub template. When working
+in this repo directly, improve the scaffold, skills, templates, and tooling.
+Put domain-specific research in child repos created from the template.
+
 ## Start Sequence
 
 Before experiment or research-note work:
