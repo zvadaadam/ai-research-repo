@@ -22,6 +22,7 @@ The live research state lives in:
 
 ```text
 .agents/skills/        project skill for coding/research agents
+.github/workflows/     structural validation in GitHub Actions
 docs/                  research-system docs and review checklists
 experiments/           numbered experiment folders plus index.yml
 research-log/          durable notes that survive one run
@@ -32,6 +33,32 @@ tools/                 small validators and maintenance helpers
 artifacts/             generated outputs, ignored by git
 data/                  generated/local datasets, ignored by git
 ```
+
+## Start A New Research Repo
+
+Preferred path:
+
+```bash
+gh repo create OWNER/NEW_RESEARCH_REPO \
+  --template zvadaadam/ai-research-repo \
+  --private \
+  --clone
+```
+
+Use `--public` instead of `--private` when the new research should be open.
+You can also click **Use this template** on GitHub.
+
+After cloning the new repo:
+
+1. Change the title and one-sentence purpose in `README.md`.
+2. Update `RESEARCH.md` with the first thesis or active question.
+3. Add the first `Q001` to `OPEN_QUESTIONS.md`.
+4. Copy `experiments/_template/` to `experiments/001_short_name/`.
+5. Run `python3 tools/validate_research_workspace.py .`.
+
+Generated data, checkpoints, videos, and metrics stay under ignored root
+folders such as `/data/` and `/artifacts/`. Experiment run records under
+`experiments/*/runs/*.md` are evidence and should be committed.
 
 ## First Rule
 

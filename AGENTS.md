@@ -48,6 +48,16 @@ it.
 - Keep external code under `third_party/` or record it as a reference.
 - Do not turn the root README into a long experiment list.
 
+## Template Setup
+
+When this repo is used as a starter, keep the structure and replace only the
+project-specific identity and first research thread:
+
+- update `README.md` with the new project name and purpose;
+- update `RESEARCH.md` with the initial thesis or active question;
+- add the first `Q001` before creating `experiments/001_short_name/`;
+- run `python3 tools/validate_research_workspace.py .`.
+
 ## Experiment Rules
 
 Create:
