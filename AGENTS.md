@@ -49,7 +49,9 @@ it.
 - Do commit experiment run records under
   `experiments/NNN_short_name/runs/*.md`; these are notebook evidence, not
   generated bulk outputs.
-- Keep external code under `third_party/` or record it as a reference.
+- Record external source snapshots as references. If copied code becomes part
+  of the research surface, put it under `src/<source-name>/` and preserve the
+  upstream URL or commit in a `P###` reference card.
 - Do not turn the root README into a long experiment list.
 
 ## Template Setup
