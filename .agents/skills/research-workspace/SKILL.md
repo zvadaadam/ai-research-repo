@@ -17,6 +17,7 @@ smallest sub-skill that matches the task:
 - `research-synthesis`: batch/branch review after several experiments.
 - `research-references`: paper cards and outside evidence.
 - `plan-research-goal`: drafting a `/goal` prompt for autonomous research.
+- `aha-moment`: personal "now it clicked" notes in `AHA/`.
 
 Keep this skill small. Detailed procedures live in the sub-skills.
 
@@ -54,6 +55,8 @@ experiment.
 - Never use the root README as an experiment ledger.
 - Separate facts, hypotheses, and decisions.
 - Prefer linked evidence IDs over narrative memory.
+- When a concept clicks for the user, load `aha-moment` and capture it in
+  `AHA/`.
 - Run `tools/validate_research_workspace.py` after structural changes.
 
 ## Periodic Compression

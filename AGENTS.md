@@ -18,6 +18,7 @@ Before experiment or research-note work:
    - `research-synthesis` for batch/branch compression.
    - `research-references` for paper cards and outside evidence.
    - `plan-research-goal` for turning a research agenda into a `/goal` prompt.
+   - `aha-moment` for personal "now it clicked" learning notes.
 3. Read `RESEARCH.md`.
 4. Read `OPEN_QUESTIONS.md`, `CLAIMS.md`, and `DECISIONS.md`.
 5. Read the relevant experiment folder and `experiments/index.yml`.
@@ -49,6 +50,8 @@ it.
 - Do commit experiment run records under
   `experiments/NNN_short_name/runs/*.md`; these are notebook evidence, not
   generated bulk outputs.
+- Store personal "now it clicked" explanations under `AHA/`, with what was
+  confusing first and the learned mental model second.
 - Store source PDFs and primary paper artifacts under `papers/`; summarize
   research relevance in `references/paper-cards/`.
 - Record external source snapshots as references. If copied code becomes part

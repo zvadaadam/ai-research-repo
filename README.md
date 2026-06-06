@@ -18,6 +18,7 @@ The live research state lives in:
 - `CLAIMS.md`: what the project currently believes, with evidence links.
 - `DECISIONS.md`: choices we have committed to, with revisit conditions.
 - `experiments/index.yml`: compact machine-readable experiment index.
+- `AHA/`: personal "now it clicked" learning notes.
 - `research-log/`: durable observations and explanations.
 
 ## Repo Map
@@ -27,6 +28,7 @@ The live research state lives in:
 .github/workflows/     structural validation in GitHub Actions
 docs/                  research-system docs and review checklists
 experiments/           numbered experiment folders plus index.yml
+AHA/                   personal aha notes and remembered explanations
 research-log/          durable notes that survive one run
 references/            paper cards, external repo notes, evidence summaries
 papers/                source PDFs and primary paper artifacts
