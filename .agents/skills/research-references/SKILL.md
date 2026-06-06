@@ -8,6 +8,9 @@ description: Add or update research paper cards, reference notes, external repo 
 Use when adding papers, external repos, datasets, benchmark docs, or reference
 notes.
 
+Store source PDFs and primary paper artifacts under `papers/`. Store concise
+research interpretation under `references/paper-cards/`.
+
 ## Reference Objects
 
 Use `P###` IDs for external evidence. Prefer concise paper cards over loose
@@ -15,11 +18,13 @@ links.
 
 ```text
 references/paper-cards/P001_short_name.md
+papers/P001_short_name.pdf
 ```
 
 ## Paper Card Must Say
 
 - source;
+- local PDF or artifact path, when available;
 - status: `unread`, `skimmed`, `read`, `implemented`, or `superseded`;
 - core claim;
 - method details we need;

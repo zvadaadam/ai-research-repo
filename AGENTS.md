@@ -49,6 +49,8 @@ it.
 - Do commit experiment run records under
   `experiments/NNN_short_name/runs/*.md`; these are notebook evidence, not
   generated bulk outputs.
+- Store source PDFs and primary paper artifacts under `papers/`; summarize
+  research relevance in `references/paper-cards/`.
 - Record external source snapshots as references. If copied code becomes part
   of the research surface, put it under `src/<source-name>/` and preserve the
   upstream URL or commit in a `P###` reference card.

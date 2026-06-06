@@ -28,7 +28,8 @@ The live research state lives in:
 docs/                  research-system docs and review checklists
 experiments/           numbered experiment folders plus index.yml
 research-log/          durable notes that survive one run
-references/            paper cards, PDFs, external repos
+references/            paper cards, external repo notes, evidence summaries
+papers/                source PDFs and primary paper artifacts
 src/                   reusable research code
 scripts/               runnable entry points
 tools/                 small validators and maintenance helpers
