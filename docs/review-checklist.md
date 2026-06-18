@@ -31,3 +31,7 @@ Use this after every batch of experiments.
 - Is the dashboard short enough to stay useful?
 - Can `tools/create_run_record.py` draft run records from artifacts instead of
   making agents rewrite boilerplate?
+- Does `factory/queue.yml` name the next candidates, or is the next goal living
+  only in chat?
+- Does every selected candidate have a stop/pivot gate and a "not next" list?
+- Do the live belief files need compression before more experiments run?

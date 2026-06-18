@@ -40,6 +40,9 @@ Write one `/goal` prompt under 4000 characters with these anchors:
 - **Where To Look**: durable zones, not brittle line numbers.
 - **Done = ...**: one boolean completion condition.
 
+If `factory/scorecards/` already contains a selected candidate, preserve its
+stop/pivot gate and "Not next" list in the goal prompt.
+
 ## Research-Specific Guidance
 
 The prompt should make the agent skeptical and productive. Prefer a small chain

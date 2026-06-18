@@ -34,14 +34,35 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def scalar_metric(value: object) -> bool:
+    return value is None or isinstance(value, (str, int, float, bool))
+
+
+def flatten_metrics(data: dict, *, prefix: str = "", max_lines: int = 80) -> list[str]:
+    lines: list[str] = []
+    for key, value in data.items():
+        name = f"{prefix}.{key}" if prefix else str(key)
+        if scalar_metric(value):
+            if isinstance(value, float):
+                lines.append(f"{name}: {value:.6f}")
+            else:
+                lines.append(f"{name}: {value}")
+        elif isinstance(value, dict):
+            lines.extend(flatten_metrics(value, prefix=name, max_lines=max_lines))
+        if len(lines) >= max_lines:
+            lines.append("... truncated metric draft; inspect summary.json for full details")
+            return lines[: max_lines + 1]
+    return lines
+
+
 def metric_lines(summary: dict) -> list[str]:
-    metrics = summary.get("final_metrics") or summary
-    lines = []
-    for key, value in metrics.items():
-        if isinstance(value, float):
-            lines.append(f"{key}: {value:.6f}")
-        elif isinstance(value, (str, int, bool)):
-            lines.append(f"{key}: {value}")
+    metrics = (
+        summary.get("final_metrics")
+        or summary.get("overall")
+        or summary.get("key_results", {}).get("overall")
+        or summary
+    )
+    lines = flatten_metrics(metrics)
     if "parameters" in summary and "parameters" not in metrics:
         lines.append(f"parameters: {summary['parameters']}")
     if "runtime_seconds" in summary and "runtime_seconds" not in metrics:

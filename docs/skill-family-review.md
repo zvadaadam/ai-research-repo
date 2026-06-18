@@ -27,6 +27,7 @@ research-experiment   experiment cards, commands, manifests, run records
 research-claims       open questions, claims, decisions
 research-synthesis    batch/branch compression
 research-references   paper cards and external evidence
+research-director     next-experiment ranking and factory queue
 plan-research-goal    `/goal` prompt planning for autonomous research loops
 ```
 
@@ -40,12 +41,18 @@ for the task.
 - `tools/validate_research_workspace.py` now checks required skills, completed
   experiment run records, index folders, question links, claim links, and
   decision links.
+- `factory/` adds a tiny queue/scorecard layer so autonomous goal loops have a
+  ranked next experiment, explicit "not next" list, and stop/pivot gate.
 
 ## Remaining Risk
 
 Too many skills can become their own navigation problem. The router skill must
 stay short, and sub-skills should stay focused. If agents repeatedly open every
 skill for every task, merge or simplify.
+
+The factory layer can also become bureaucracy. If the next experiment is a
+direct consequence of a fresh decision, do not overfill the queue; write the
+scorecard only when it helps choose among alternatives or prevents thrash.
 
 ## Verdict
 

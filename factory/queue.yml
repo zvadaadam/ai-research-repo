@@ -1,0 +1,8 @@
+version: 1
+updated: null
+policy:
+  max_active_goals: 1
+  prefer_decisive_experiments_over_broad_sweeps: true
+  require_stop_or_pivot_gate: true
+  require_scorecard_before_goal: true
+queue: []

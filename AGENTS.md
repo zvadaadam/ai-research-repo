@@ -17,11 +17,14 @@ Before experiment or research-note work:
    - `research-claims` for questions, claims, decisions.
    - `research-synthesis` for batch/branch compression.
    - `research-references` for paper cards and outside evidence.
+   - `research-director` for ranking next experiments and maintaining the
+     factory queue before starting a new autonomous goal.
    - `plan-research-goal` for turning a research agenda into a `/goal` prompt.
    - `aha-moment` for personal "now it clicked" learning notes.
 3. Read `RESEARCH.md`.
 4. Read `OPEN_QUESTIONS.md`, `CLAIMS.md`, and `DECISIONS.md`.
-5. Read the relevant experiment folder and `experiments/index.yml`.
+5. Read `experiments/index.yml` and `factory/queue.yml`.
+6. Read the relevant experiment folder.
 
 ## Research Objects
 
@@ -54,6 +57,8 @@ it.
   confusing first and the learned mental model second.
 - Store source PDFs and primary paper artifacts under `papers/`; summarize
   research relevance in `references/paper-cards/`.
+- Store ranked next-experiment candidates under `factory/`; do not start a
+  new autonomous goal loop from vibes alone.
 - Record external source snapshots as references. If copied code becomes part
   of the research surface, put it under `src/<source-name>/` and preserve the
   upstream URL or commit in a `P###` reference card.
@@ -68,6 +73,7 @@ project-specific identity and first research thread:
 - update `RESEARCH.md` with the initial thesis or active question;
 - add the first `Q001` before creating `experiments/001_short_name/`;
 - run `python3 tools/validate_research_workspace.py .`.
+- check `factory/queue.yml` before launching the first autonomous goal.
 
 ## Experiment Rules
 
@@ -112,3 +118,16 @@ predeclared metric or a clearly stated qualitative observation.
 After roughly five serious experiments in a branch, write a synthesis note and
 make one explicit continue/stop/pivot decision. Do not let a branch grow only
 chronologically without compressing what is now believed.
+
+## Factory Discipline
+
+Before launching a new `/goal` loop, use `research-director` when the next
+experiment is not obvious. The selected goal should have:
+
+- a scorecard under `factory/scorecards/`;
+- an entry in `factory/queue.yml`;
+- a stop or pivot gate;
+- a short list of tempting experiments that should not run next.
+
+If the live belief files are too long to inspect quickly, compress them before
+running more experiments.
