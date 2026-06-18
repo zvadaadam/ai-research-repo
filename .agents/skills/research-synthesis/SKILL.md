@@ -29,6 +29,7 @@ Answer:
 - What should stop?
 - What should continue?
 - What is the next sharper question?
+- What should be compressed before more experiments run?
 
 ## Required Output
 
@@ -39,8 +40,13 @@ Update or create:
 - `OPEN_QUESTIONS.md`;
 - `DECISIONS.md` with one continue/stop/pivot decision if behavior changes;
 - `RESEARCH.md` dashboard.
+- `factory/queue.yml` if the next experiment or priority changed.
 
 ## Discipline
 
 Prefer one strong conclusion over many loose observations. Mark stale claims or
 questions `superseded` instead of leaving them quietly misleading.
+
+If the synthesis mostly adds chronology to `RESEARCH.md` or `CLAIMS.md`, stop
+and compress instead. The dashboard should point to synthesis notes; it should
+not become the synthesis note.

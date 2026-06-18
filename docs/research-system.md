@@ -25,6 +25,18 @@ Belief is compressed:
 
 Belief should be easy to inspect and easy to revise.
 
+## Layer 3: Factory
+
+The factory layer chooses what to run next:
+
+- scorecards;
+- ranked queue;
+- goal prompts;
+- audits.
+
+Factory state should be small. It should say why the next experiment is worth
+running and what should not be run next.
+
 ## Anti-Pattern
 
 Avoid one giant chronological diary where every file is equally important.
@@ -53,6 +65,7 @@ The repo uses a small skill family instead of one large instruction file:
 - `research-claims`: questions, claims, decisions.
 - `research-synthesis`: branch compression after a batch.
 - `research-references`: paper cards and external evidence.
+- `research-director`: next-experiment ranking and factory queue maintenance.
 - `plan-research-goal`: `/goal` prompt planning for autonomous research loops.
 
 This keeps routine experiment work from loading synthesis or reference details
