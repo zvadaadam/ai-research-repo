@@ -1,0 +1,4 @@
+interface:
+  display_name: "DGX Spark Remote"
+  short_description: "Run research jobs on the DGX Spark"
+  default_prompt: "Use $dgx-spark-remote to set up, sync, and run a CUDA research job on spark-f0a3.local."
