@@ -30,9 +30,14 @@ experiment time.
 
 ## Goal Shapes
 
-Use a finite goal when the next unit of work is one experiment, smoke test,
-repair, comparison, or scorecard candidate. It should have a concrete
-`Done = ...` condition and stop when that evidence is recorded.
+Use a single experiment goal when the next unit of work is one experiment,
+smoke test, repair, comparison, or scorecard candidate. It should have a
+concrete `Done = ...` condition and stop when that evidence is recorded.
+
+Use a batch experiment goal when the next unit of work is a bounded sprint of
+two to five related experiments. It should update evidence after every run,
+then stop after a synthesis note chooses the next single, batch, or continuous
+goal.
 
 Use a continuous factory-loop goal only when the intent is to keep the research
 program running across many experiment cycles. It should not stop after one
