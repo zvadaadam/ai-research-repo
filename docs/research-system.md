@@ -37,6 +37,11 @@ The factory layer chooses what to run next:
 Factory state should be small. It should say why the next experiment is worth
 running and what should not be run next.
 
+Factory goals come in two shapes. A finite experiment goal should stop when one
+evidence-producing unit is recorded. A continuous factory-loop goal should keep
+selecting, running, recording, validating, and synthesizing experiments until a
+thesis-level evidence target is reached, falsified, or externally blocked.
+
 ## Anti-Pattern
 
 Avoid one giant chronological diary where every file is equally important.

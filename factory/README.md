@@ -3,7 +3,7 @@
 This folder is the small operating layer above the evidence graph.
 
 The evidence graph remembers what happened. The factory queue decides what to
-try next, what not to try, and when a branch should stop.
+try next, what not to try, and when a branch should stop or keep looping.
 
 Use this layer when a project has more possible experiments than attention or
 compute.
@@ -27,3 +27,15 @@ what result would stop or pivot the branch
 
 If those are unclear, use the `research-director` skill before spending
 experiment time.
+
+## Goal Shapes
+
+Use a finite goal when the next unit of work is one experiment, smoke test,
+repair, comparison, or scorecard candidate. It should have a concrete
+`Done = ...` condition and stop when that evidence is recorded.
+
+Use a continuous factory-loop goal only when the intent is to keep the research
+program running across many experiment cycles. It should not stop after one
+experiment or one synthesis note. It stops only when the thesis-level evidence
+target is reached, the thesis is falsified, or a documented external blocker
+prevents the next smallest repair.
